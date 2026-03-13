@@ -1,1 +1,1108 @@
-Hola Mundo :)
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A&A SOLUTIONS LLC - Your Trusted Partner</title>
+        <link rel="icon" type="image/png" href="img/logo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #B8956A;
+            --dark-gold: #9A7A4F;
+            --charcoal: #2C3539;
+            --dark-charcoal: #1A1F22;
+            --light-gray: #F5F5F5;
+            --mid-gray: #E8E8E8;
+            --white: #FFFFFF;
+            --text-gray: #6B7280;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            border-bottom: 2px solid var(--gold);
+        }
+
+        nav .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .brand-area {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        nav .logo-img {
+            height: 70px;
+            width: auto;
+        }
+
+        nav .brand-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav .company-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--charcoal);
+            line-height: 1;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        nav .company-subtitle {
+            font-size: 0.75rem;
+            color: var(--gold);
+            font-weight: 600;
+            margin-top: 0.25rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 0;
+        }
+
+        nav a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: all 0.3s;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        nav a:hover::before {
+            width: 70%;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: var(--gold);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: var(--white);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-charcoal) 0%, var(--charcoal) 100%) !important;
+            color: var(--white);
+            padding: 10rem 2rem 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="0,0 100,0 100,100" fill="rgba(184,149,106,0.05)"/></svg>');
+            background-size: cover;
+        }
+
+        .hero .hero-main {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: rgba(184, 149, 106, 0.2);
+            color: var(--gold);
+            padding: 0.5rem 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--gold);
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 900px;
+            margin-top: 3rem;
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border: 1px solid rgba(184, 149, 106, 0.3);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .metric-card:hover {
+            background: rgba(184, 149, 106, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .metric-icon {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .metric-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--white);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--white);
+            padding: 1.25rem 3rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 2px solid var(--gold);
+        }
+
+        .cta-btn:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        section:nth-child(even) {
+            background: var(--light-gray);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .section-title span {
+            color: var(--gold);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* About */
+        .about-layout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .about-box {
+            background: var(--white);
+            padding: 3rem;
+            border-left: 4px solid var(--gold);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+
+        .about-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(184, 149, 106, 0.2);
+        }
+
+        .about-box h3 {
+            font-size: 2.2rem;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .about-box h3 span {
+            color: var(--gold);
+        }
+
+        .about-box p {
+            line-height: 1.8;
+            color: #4B5563;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            border-top: 3px solid var(--gold);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(184, 149, 106, 0.2);
+        }
+
+        .benefit-icon {
+            width: 85px;
+            height: 85px;
+            background: var(--gold);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .benefit-item h4 {
+            font-size: 1.4rem;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .benefit-item p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 3rem 2.5rem;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .service-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(184, 149, 106, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+            font-weight: 700;
+        }
+
+        .service-card p {
+            line-height: 1.8;
+            color: var(--text-gray);
+        }
+
+        /* Gallery */
+        .gallery-section {
+            background: var(--charcoal);
+            padding: 5rem 2rem;
+        }
+
+        .gallery-wrapper {
+            position: relative;
+            max-width: 1200px;
+            margin: 3rem auto;
+            overflow: hidden;
+            box-shadow: 0 15px 60px rgba(0, 0, 0, 0.7);
+            border: 3px solid var(--gold);
+        }
+
+        .gallery-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .gallery-item {
+            min-width: 100%;
+            height: 650px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .gallery-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--gold);
+            color: var(--white);
+            border: none;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.75rem;
+            font-weight: 700;
+            z-index: 10;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-btn:hover {
+            background: var(--dark-gold);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .gallery-btn.prev {
+            left: 1.5rem;
+        }
+
+        .gallery-btn.next {
+            right: 1.5rem;
+        }
+
+        .gallery-count {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 1.5rem;
+            background: rgba(184, 149, 106, 0.95);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            z-index: 10;
+        }
+
+        /* Contact */
+        .contact-section {
+            background: var(--light-gray);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .contact-method {
+            display: block;
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--charcoal);
+            transition: all 0.3s;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            border: 2px solid transparent;
+        }
+
+        .contact-method:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(184, 149, 106, 0.2);
+        }
+
+        .contact-method-icon {
+            width: 85px;
+            height: 85px;
+            background: var(--gold);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.25rem;
+        }
+
+        .contact-method h5 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .contact-method p {
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 3rem;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .info-row {
+            display: flex;
+            align-items: start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-icon {
+            font-size: 2rem;
+            color: var(--gold);
+            min-width: 40px;
+        }
+
+        .info-row h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.35rem;
+            color: var(--charcoal);
+            font-weight: 700;
+        }
+
+        .info-row p,
+        .info-row a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .info-row a:hover {
+            color: var(--gold);
+        }
+
+        .map-container {
+            overflow: hidden;
+            height: 100%;
+            min-height: 450px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+            border: 3px solid var(--gold);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        footer .footer-tagline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        footer p {
+            opacity: 0.85;
+            margin: 0.5rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 0;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hero {
+                padding: 9rem 2rem 5rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .hero-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .about-layout,
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item {
+                height: 400px;
+            }
+
+            .gallery-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.3rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="brand-area">
+                <img src="img/logo.png" alt="A&A SOLUTIONS LLC" class="logo-img">
+                <div class="brand-info">
+                    <div class="company-title">A&A SOLUTIONS</div>
+                    <div class="company-subtitle">Excellence Since 2018</div>
+                </div>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">MENU</button>
+            <ul id="navMenu">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-main">
+            <div class="hero-label">DANBURY, CONNECTICUT</div>
+            <h1>YOUR TRUSTED<br><span>PARTNER</span></h1>
+            <p class="tagline">"For Property Services"</p>
+            <p>Professional property improvement services in Danbury, Connecticut and surrounding areas. With six years
+                of experience, we specialize in remodeling, painting, cleaning, and maintenance services designed to
+                improve the appearance, functionality, and value of your property.</p>
+            <a href="#contact" class="cta-btn">GET STARTED TODAY</a>
+
+            <div class="hero-metrics">
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-award"></i></div>
+                    <div class="metric-number">6+</div>
+                    <div class="metric-label">Years Experience</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-star"></i></div>
+                    <div class="metric-number">100%</div>
+                    <div class="metric-label">Quality</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="metric-number">24/7</div>
+                    <div class="metric-label">Service</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">WHO WE ARE</div>
+                <h2 class="section-title">A&A <span>SOLUTIONS</span></h2>
+                <p class="section-subtitle">Led by Diego Maldonado - Your partner in property excellence</p>
+            </div>
+
+            <div class="about-layout">
+                <div class="about-box">
+                    <h3>OUR <span>STORY</span></h3>
+                    <p>A&A Solutions LLC is a locally operated company led by Diego Maldonado. With six years of hands-on
+                        experience in home improvement and property services, our company focuses on providing
+                        dependable solutions for homeowners and businesses.</p>
+                    <p>We are committed to delivering professional work with attention to detail and a strong focus on
+                        customer satisfaction. Every project we undertake is treated with responsibility, efficiency,
+                        and care.</p>
+                </div>
+
+                <div class="about-box">
+                    <h3>OUR <span>MISSION</span></h3>
+                    <p>Our mission is to provide reliable remodeling, maintenance, and property improvement services
+                        that enhance the comfort, safety, and value of every property we serve. We aim to deliver
+                        professional results while maintaining high standards of quality and customer satisfaction.</p>
+
+                    <h3 style="margin-top: 2rem;">OUR <span>VISION</span></h3>
+                    <p>Our vision is to become a trusted property improvement company in Connecticut, recognized for
+                        reliable service, quality workmanship, and strong client relationships.</p>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 4rem; margin-bottom: 0;">
+                <div class="section-badge">WHY CHOOSE US</div>
+                <h2 class="section-title">OUR <span>ADVANTAGES</span></h2>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-award"></i></div>
+                    <h4>6 Years Experience</h4>
+                    <p>Proven track record of excellence</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-handshake"></i></div>
+                    <h4>Professional Service</h4>
+                    <p>Reliable and professional team</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-gem"></i></div>
+                    <h4>Quality Finishes</h4>
+                    <p>High-quality results every time</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-eye"></i></div>
+                    <h4>Attention to Detail</h4>
+                    <p>Precision in every project</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-building"></i></div>
+                    <h4>Residential & Commercial</h4>
+                    <p>Expertise in both sectors</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fas fa-tools"></i></div>
+                    <h4>Full-Service</h4>
+                    <p>Expanding capabilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">WHAT WE DO</div>
+                <h2 class="section-title">OUR <span>SERVICES</span></h2>
+                <p class="section-subtitle">Comprehensive property improvement solutions</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+                    <h3>Painting Services</h3>
+                    <p>Interior and exterior painting, residential and commercial painting, cabinet painting &
+                        refinishing, accent walls, surface preparation, touch-ups and repainting.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-home"></i></div>
+                    <h3>Remodeling</h3>
+                    <p>Interior renovations, kitchen upgrades, bathroom remodeling, drywall installation and repair,
+                        minor carpentry, flooring installation.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-broom"></i></div>
+                    <h3>Cleaning & Junk Removal</h3>
+                    <p>Residential cleaning, deep cleaning, move-in/move-out cleaning, post-construction cleaning,
+                        general junk removal services.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Property Maintenance</h3>
+                    <p>General repairs, preventive maintenance, minor installations, property touch-ups, rental property
+                        upkeep.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge" style="background: var(--white); color: var(--gold);">OUR WORK</div>
+                <h2 class="section-title" style="color: var(--white);">PROJECT <span
+                        style="color: var(--gold);">SHOWCASE</span></h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">See the quality of our completed
+                    projects</p>
+            </div>
+
+            <div class="gallery-wrapper">
+                <div class="gallery-count">
+                    <span id="currentSlide">1</span> / <span id="totalSlides">15</span>
+                </div>
+
+                <button class="gallery-btn prev" onclick="moveSlide(-1)">❮</button>
+                <button class="gallery-btn next" onclick="moveSlide(1)">❯</button>
+
+                <div class="gallery-track" id="galleryTrack">
+                    <div class="gallery-item"><img src="img/1.jpg" alt="Project 1"></div>
+                    <div class="gallery-item"><img src="img/2.jpg" alt="Project 2"></div>
+                    <div class="gallery-item"><img src="img/3.jpg" alt="Project 3"></div>
+                    <div class="gallery-item"><img src="img/4.jpg" alt="Project 4"></div>
+                    <div class="gallery-item"><img src="img/5.jpg" alt="Project 5"></div>
+                    <div class="gallery-item"><img src="img/6.jpg" alt="Project 6"></div>
+                    <div class="gallery-item"><img src="img/7.jpg" alt="Project 7"></div>
+                    <div class="gallery-item"><img src="img/8.jpg" alt="Project 8"></div>
+                    <div class="gallery-item"><img src="img/9.jpg" alt="Project 9"></div>
+                    <div class="gallery-item"><img src="img/10.jpg" alt="Project 10"></div>
+                    <div class="gallery-item"><img src="img/11.jpg" alt="Project 11"></div>
+                    <div class="gallery-item"><img src="img/12.jpg" alt="Project 12"></div>
+                    <div class="gallery-item"><img src="img/13.jpg" alt="Project 13"></div>
+                    <div class="gallery-item"><img src="img/14.jpg" alt="Project 14"></div>
+                    <div class="gallery-item"><img src="img/15.jpg" alt="Project 15"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">GET IN TOUCH</div>
+                <h2 class="section-title">CONTACT <span>US</span></h2>
+                <p class="section-subtitle">Ready to improve your property? Let's talk</p>
+            </div>
+
+            <div class="contact-grid">
+                <a href="tel:475-279-2013" class="contact-method">
+                    <div class="contact-method-icon"><i class="fas fa-phone"></i></div>
+                    <h5>CALL US</h5>
+                    <p>(475) 279-2013</p>
+                </a>
+
+                <a href="https://wa.me/14752792013" target="_blank" class="contact-method">
+                    <div class="contact-method-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h5>WHATSAPP</h5>
+                    <p>Message us</p>
+                </a>
+
+                <a href="mailto:info@aasolutionsllcs.com" class="contact-method">
+                    <div class="contact-method-icon"><i class="fas fa-envelope"></i></div>
+                    <h5>EMAIL</h5>
+                    <p>Send message</p>
+                </a>
+
+                <a href="sms:475-279-2013" class="contact-method">
+                    <div class="contact-method-icon"><i class="fas fa-sms"></i></div>
+                    <h5>TEXT</h5>
+                    <p>SMS service</p>
+                </a>
+            </div>
+
+            <div class="contact-info-grid">
+                <div class="info-card">
+                    <div class="info-row">
+                        <div class="info-icon"><i class="fas fa-user"></i></div>
+                        <div>
+                            <h4>OWNER</h4>
+                            <p>Diego Maldonado</p>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>PHONE</h4>
+                            <p><a href="tel:475-279-2013">(475) 279-2013</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>EMAIL</h4>
+                            <p><a href="mailto:info@aasolutionsllcs.com">info@aasolutionsllcs.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>ADDRESS</h4>
+                            <p>25 West Wooster St<br>Danbury, CT 06810</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.234567890123!2d-73.4734567!3d41.3934567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s25%20West%20Wooster%20St%2C%20Danbury%2C%20CT%2006810!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-tagline">"Your Trusted Partner for Property Services."</p>
+            <p>&copy; 2026 A&A SOLUTIONS LLC. All rights reserved.</p>
+            <p>Professional Property Improvement Services in Connecticut</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const totalSlides = 15;
+
+        function initGallery() {
+            updateCounter();
+            showSlide(currentIndex);
+        }
+
+        function showSlide(index) {
+            const track = document.getElementById('galleryTrack');
+
+            currentIndex = index;
+
+            if (currentIndex >= totalSlides) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = totalSlides - 1;
+
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            updateCounter();
+        }
+
+        function moveSlide(direction) {
+            showSlide(currentIndex + direction);
+        }
+
+        function updateCounter() {
+            document.getElementById('currentSlide').textContent = currentIndex + 1;
+            document.getElementById('totalSlides').textContent = totalSlides;
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') moveSlide(-1);
+            if (e.key === 'ArrowRight') moveSlide(1);
+        });
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.getElementById('galleryTrack').addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.getElementById('galleryTrack').addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchEndX < touchStartX - 50) moveSlide(1);
+            if (touchEndX > touchStartX + 50) moveSlide(-1);
+        });
+
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initGallery();
+        });
+    </script>
+</body>
+
+</html>
